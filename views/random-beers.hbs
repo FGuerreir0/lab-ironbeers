@@ -1,0 +1,35 @@
+<!--
+  <div>
+  <img src="{{ random.image_url }}" alt="{{ random.name }}">
+  <div>
+          <strong>{{ random.name }}</strong>
+          <br><br>
+          <strong>{{ random.tagline }}</strong>  
+          <br><br>
+          <small>{{ random.description }}</small> 
+          <br><br>
+          <strong>Food Pairing</strong>
+
+           {{#each random.food_pairing}}
+          <li>{{ this }}</li>
+          {{/each}}
+          <br><br>
+          <strong>Brewers Tips</strong><br>
+          <small>{{ random.brewers_tips }}</small> 
+          
+  </div>
+</div>-->
+
+<div class="eachBeer">
+{{>beerpartial random}}
+<article>
+<strong>Food Pairing</strong>
+
+           {{#each random.food_pairing}}
+          <li>{{ this }}</li>
+          {{/each}}
+          <br><br>
+          <strong>Brewers Tips</strong><br>
+          <small>{{ random.brewers_tips }}</small> 
+</article>
+</div>
